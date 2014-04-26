@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php" : ">=5.4.0",
+        "silex/silex": "~1.1",
+        "twig/twig": "v1.13.0",
+        "piece/stagehand-testrunner": "v3.6.1",
+        "phpunit/phpunit": "3.7.20",
+        "symfony/twig-bridge":"~2.3"
+    },
+    "autoload":{
+        "psr-0":{ "com": "src/"}
+    }
+}
