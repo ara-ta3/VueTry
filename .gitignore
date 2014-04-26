@@ -1,4 +1,4 @@
-bower_components/*
+public/components/*
 composer.phar
 vendor/*
 npm-debug.log
