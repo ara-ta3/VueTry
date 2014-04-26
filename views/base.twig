@@ -2,15 +2,20 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css/common.css">
+    <script src='/components/jquery/dist/jquery.js'></script>
+    <script src='/components/bootstrap/dist/js/bootstrap.js'></script>
     <script src='/components/vue/dist/vue.js'></script>
-    <title>hoge</title>
+    <script src='/js/common.js'></script>
+    <title>掲示板的なものを目指している</title>
 </head>
 <body>
-    <div id="demo">
-        {% block body %}
-        {% endblock %}
+    <div class="container">
+        <div id="app">
+            {% block body %}
+            {% endblock %}
+        </div>
     </div>
-<script src='/js/common.js'></script>
 </body>
 </html>

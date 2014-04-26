@@ -7,7 +7,9 @@ $app->get('/', function () use($app) {
 ->bind('index');
 
 $app->post('/', function() use ($app) {
-    echo json_encode([
-        'hoge' => 'fuga',
-        ]);
+    $message = $app['request']->get('message');
+    return $app->json([
+        'result' => true,
+        'message' => $message,
+    ], 201);
 });
