@@ -14,7 +14,7 @@ update:
 	$(PHP) composer.phar update
 
 server:
-	$(PHP) -S $(HOST):$(PORT) -t ./public_html
+	$(PHP) -S $(HOST):$(PORT) -t ./public
 
 test:
 	$(PHP) ./vendor/bin/phpunit --bootstrap ./vendor/autoload.php -c ./phpunit.xml ./tests
