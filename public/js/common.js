@@ -2,25 +2,23 @@ $(document).ready(function(){
     var app = new Vue({
         el: '#app',
         data: {
+            username:'',
+            userpass:'',
             message:'',
-        messages: [
-    {
-        content: 'Learn JavaScript'
-    }
-    ]
         },
         methods: {
-             addMessage: function(e) {
+             login: function(e) {
                  e.preventDefault();
-                 $.post('/',{
-                    data:{
-                        'message': this.message
-                    }
+                 $.ajax({
+                     type:'POST',
+                     url:'/login',
+                     data:{
+                         'username': this.username,
+                         'password': this.userpass
+                     }
                  })
                  .then(function(data){
-                     if( data.result ) {
-                         this.messages.push({content:this.message});
-                     }
+                     this.message = data.message;
                  }.bind(this));
              }
          }

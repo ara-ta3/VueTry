@@ -4,15 +4,14 @@
 <h1>messageを入力</h1>
 <form role="form">
     <div class="form-group">
-        <label for="message">{{message}}</label>
-        <input type="text" class="form-control" id="message" placeholder="Enter Message" v-model='message'>
+        <input type="text" class="form-control" name='username' placeholder="username" v-model='username' required>
     </div>
-    <input type="button" class='btn btn-default' value='送信' v-on='click: addMessage'>
+
+    <div class="form-group">
+        <input type="password" class="form-control" name='password' placeholder="password" v-model='userpass'>
+    </div>
+    <input type="button" class='btn btn-default' value='送信' v-on='click: login' required>
 </form>
-<ul>
-    <li v-repeat="messages" v-transition>
-    {{content}}
-    </li>
-</ul>
+<h2 v-model='message'>{{message}}</h2>
 {% endraw %}
 {% endblock %}
